@@ -184,5 +184,17 @@ public class Main {
         }
     }
 
+    public static void ViewRoomsOrderedAlphabeticallyByName(Room[] myHotel) {
+        String[] myStrArray = new String[myHotel.length];
+        for (int i = 0; i < myHotel.length; i++) {
+            myStrArray[i] = myHotel[1].getName();
+        }
 
-}
+        Arrays.sort(myStrArray);
+        for (int a = 0; a < myStrArray.length; a++) {
+            System.out.println(myStrArray[a]);
+        }
+
+
+
+    }
