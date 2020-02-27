@@ -104,7 +104,6 @@ public class Main {
     }
 
 
-
     public static String getString() {
         return "wi-f";
     }
@@ -118,3 +117,42 @@ public class Main {
             myHotel[x].setName("Nobody");
         }
     }
+
+    public static void CheckIfEmpty(Room[] myHotel) {
+        for (int x = 0; x < myHotel.length; x++) {
+            if (myHotel[x].getName().equals("Nobody")) {
+                System.out.println("Room " + (x + 1) + " is Empty");
+            }
+        }
+    }
+
+    public static void BookARoom(Room[] myHotel, int roomNum) {
+        String roomName;
+        int days;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter room number (1-10):");
+        roomNum = input.nextInt() - 1;
+        System.out.println("Enter name for room " + (roomNum + 1) + " :");
+        roomName = input.next();
+        System.out.println("Amount persons?:");
+        int persons = input.nextInt();
+        System.out.println("How many days is the reservation?:");
+        days = input.nextInt();
+        System.out.println("Breakfast included or without?: ");
+        int meals = input.nextInt();
+
+        int twinRooms = persons / 2 + persons % 2;
+        System.out.println("Double rooms: " + twinRooms);
+
+        int priceForStay = days * (twinRooms * 9500);
+        System.out.println("Price for staying: " + priceForStay / 100 + "€");
+        myHotel[roomNum].setName(roomName);
+
+    }
+
+
+
+
+
+}
