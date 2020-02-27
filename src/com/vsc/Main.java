@@ -103,4 +103,18 @@ public class Main {
 
     }
 
-}
+
+
+    public static String getString() {
+        return "wi-f";
+    }
+
+    public static String getS() {
+        return "wi-fi";
+    }
+
+    public static void initialise(Room[] myHotel) {
+        for (int x = 0; x < myHotel.length; x++) {
+            myHotel[x].setName("Nobody");
+        }
+    }
