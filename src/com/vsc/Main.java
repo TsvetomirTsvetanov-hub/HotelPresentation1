@@ -151,8 +151,38 @@ public class Main {
 
     }
 
+    public static void ViewAllRooms(Room[] myHotel) {
+        for (int x = 0; x < myHotel.length; x++) {
+            System.out.println("Room " + (x + 1) + " Occupied by " + myHotel[x].getName());
 
+        }
+    }
 
+    public static void DeleteCustomerFromRoom(Room[] myHotel, int roomNum) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter room number to delete(1-10):");
+        roomNum = input.nextInt() - 1;
+        myHotel[roomNum].setName("Nobody");
+        System.out.println("Entery Deleted :)");
+    }
+
+    private static void FindRoomFromCustomerName(Room[] myHotel) {
+        Scanner input = new Scanner(System.in);
+        String roomName;
+        System.out.println("Enter name to Search for:");
+        roomName = input.next();
+        int x;
+        boolean Checker = false;
+        for (x = 0; x < myHotel.length; x++) {
+            if (roomName.equals(myHotel[x].getName())) {
+                System.out.println("The Account That Matches That name is Account number " + (x + 1));
+                Checker = true;
+            }
+        }
+        if (Checker == false) {
+            System.out.println("There are no Rooms Booked with that name\n(make sure you've used the correct CAP's)");
+        }
+    }
 
 
 }
