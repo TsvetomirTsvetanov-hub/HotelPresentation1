@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+
+public class Babami {
 
     public static boolean MainMenu = true;
     public static boolean SubMenu = true;
@@ -12,8 +13,8 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
-        Hotel.Room[] myHotel = new Hotel.Room[10];
-        myHotel[0] = new Hotel.Room();
+        Room[] myHotel = new Hotel.Room[10];
+        myHotel[0] = new Room();
         myHotel[1] = new Hotel.Room();
         myHotel[2] = new Hotel.Room();
         myHotel[3] = new Hotel.Room();
@@ -52,7 +53,7 @@ public class Main {
                 Selection = Selection.toUpperCase();
                 switch (Selection) {
                     case "A":
-                        BookARoom(myHotel, roomNum);
+                        BookARoom(myHotel,roomNum);
                         break;
                     case "B":
                         CheckIfEmpty(myHotel);
@@ -103,9 +104,6 @@ public class Main {
 
     }
 
-
-
-
     public static String getString() {
         return "wi-f";
     }
@@ -128,9 +126,9 @@ public class Main {
         }
     }
 
-    public static void BookARoom(Room[] myHotel, int roomNum) {
+    public static void BookARoom(Room[] myHotel, int roomNum,int days) {
         String roomName;
-        int days;
+//        int days;
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter room number (1-10):");
@@ -227,7 +225,5 @@ public class Main {
     }
 
 
+
 }
-
-
-

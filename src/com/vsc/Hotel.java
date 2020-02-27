@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
+public class Hotel {
+
 
     public static boolean MainMenu = true;
     public static boolean SubMenu = true;
@@ -102,9 +103,6 @@ public class Main {
         }
 
     }
-
-
-
 
     public static String getString() {
         return "wi-f";
@@ -226,8 +224,5 @@ public class Main {
 
     }
 
-
 }
-
-
 
